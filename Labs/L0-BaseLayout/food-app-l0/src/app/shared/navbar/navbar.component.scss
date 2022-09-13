@@ -1,0 +1,16 @@
+
+.menu{
+    display: flex; 
+    width: 100%;
+    flex-direction: row;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.menuItem{
+    margin-right: 0.5rem;
+}
+
+.menuItem:hover{
+font-weight: bold;
+}

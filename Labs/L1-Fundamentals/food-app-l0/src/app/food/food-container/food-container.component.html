@@ -1,0 +1,4 @@
+<app-food-list [foodList]=foodList (foodSelected)="onFoodSelected($event)"></app-food-list>
+<br />
+<app-food-edit *ngIf="current" [selectedFood]="current" (saveFood)="onFoodSaved($event)">
+</app-food-edit>

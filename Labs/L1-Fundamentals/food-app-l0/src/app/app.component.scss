@@ -1,0 +1,27 @@
+$navbar_height: 75px;
+$sidebar_width: 200px;
+
+.nav{
+    padding: 1rem;
+    height: $navbar_height;
+    background-color: lavender;
+}
+
+.maincontainer{
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - $navbar_height);
+}
+
+.side{
+    background-color: yellow;
+    min-width: sidebar_width;
+    padding: 1rem;
+}
+
+.main{
+    background-color: whitesmoke;
+    padding: 1rem;
+    flex-grow: 1;
+    // width: calc(100vw - sidebar_width)
+}

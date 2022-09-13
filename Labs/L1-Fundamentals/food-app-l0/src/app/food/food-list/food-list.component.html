@@ -1,0 +1,23 @@
+<div *ngIf="foodList.length == 0">
+    There is no food to show :(
+</div>
+<div *ngIf="foodList.length>0">
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Calories</th>
+            <th> </th>
+            <th> </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let singleFood of foodList">
+                <td>{{singleFood.name}}</td>
+                <td>{{singleFood.price}}</td>
+                <td>{{singleFood.calories}}</td>
+                <td class="center"> <a class="delete" (click)="deleteFood(singleFood)"> Delete </a></td>
+                <td class="center"> <a class="select" (click)="selectFood(singleFood)"> Select </a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

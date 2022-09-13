@@ -1,0 +1,47 @@
+table {
+    //width: 100%;
+    border: 1px solid #000;
+    table-layout: auto;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+}
+
+tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+th {
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+
+td.center {
+    text-align: center !important;
+}
+
+a {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15%;
+}
+
+.delete {
+    background-color: red;
+
+}
+
+.select {
+    background-color: #00aaff;
+}

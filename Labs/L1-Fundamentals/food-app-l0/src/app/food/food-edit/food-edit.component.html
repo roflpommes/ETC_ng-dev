@@ -1,0 +1,18 @@
+<div>
+    <h3>Edit food</h3>
+</div>
+
+<label for="inputName">Name</label>
+
+<input name="inputName" type="text" [(ngModel)]="selectedFood.name">
+
+<label for="inputPrice">Price</label>
+
+<input name="inputPrice" type="text" [(ngModel)]="selectedFood.price">
+
+
+<label for="inputCalories">Calories</label>
+
+<input name="inputCalories" type="text" [(ngModel)]="selectedFood.calories">
+
+<button (click)="saveChanges()">Save</button>
