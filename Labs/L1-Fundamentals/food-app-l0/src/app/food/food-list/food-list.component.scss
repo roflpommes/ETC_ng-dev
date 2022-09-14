@@ -1,47 +1,25 @@
 table {
-    //width: 100%;
-    border: 1px solid #000;
-    table-layout: auto;
+    width: 100%;
 }
 
-th,
+table th,
 td {
-    padding: 15px;
-    text-align: left;
-}
-
-tr:nth-child(odd) {
-    background-color: lightgray;
-}
-
-th {
-    font-weight: bold;
-    background-color: black;
-    color: white;
-}
-
-td.center {
-    text-align: center !important;
-}
-
-a {
-    border: none;
-    color: white;
-    padding: 10px 20px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 15%;
+    vertical-align: middle;
 }
 
-.delete {
-    background-color: red;
-
+td button {
+    margin: 10px 0;
 }
 
-.select {
-    background-color: #00aaff;
+tr.table-content:hover {
+    background-color: lightblue;
+}
+
+mat-card {
+    margin-bottom: 1rem;
+}
+
+mat-toolbar {
+    margin-bottom: 0.5rem;
 }

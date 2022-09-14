@@ -9,6 +9,9 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { FoodModule } from './food/food.module';
+import { MaterialModule } from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { FoodModule } from './food/food.module';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    FoodModule
+    FoodModule,
+    MaterialModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

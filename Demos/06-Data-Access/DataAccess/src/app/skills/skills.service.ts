@@ -9,7 +9,7 @@ import { Skill } from './skill.model';
   providedIn: 'root',
 })
 export class SkillsService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
 
   private url = `${environment.api}skills`;
 

@@ -1,13 +1,15 @@
-<div>
-  <div class="nav">
+<div gdAreas="navbar navbar | sidebar main" gdAreas.lt-md="navbar  | main" gdGap="0.5rem" gdRows="65px auto"
+  gdColumns="180px auto" gdColumns.lt-md="100%" class="grid">
+  <div gdArea="navbar">
     <app-navbar></app-navbar>
   </div>
-  <div class="maincontainer">
-    <div class="side">
-      <app-sidemenu></app-sidemenu>
-    </div>
-    <div class="main">
-      <router-outlet></router-outlet>
-    </div>
+
+
+  <div gdArea="sidebar" fxHide.lt-md class="menu">
+    <app-sidemenu></app-sidemenu>
+  </div>
+  <div gdArea="main" class="main">
+    <router-outlet></router-outlet>
+
   </div>
 </div>

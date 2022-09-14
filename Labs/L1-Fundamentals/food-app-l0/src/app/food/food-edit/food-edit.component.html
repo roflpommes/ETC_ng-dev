@@ -1,18 +1,69 @@
-<div>
-    <h3>Edit food</h3>
-</div>
+<mat-card>
+    <mat-card-actions align="end">
+        <mat-icon (click)="closeEdit()">close</mat-icon>
+    </mat-card-actions>
+    <mat-card-content fxLayout="column" fxLayoutAlign="center start">
 
-<label for="inputName">Name</label>
+        <form [formGroup]="foodForm" (ngSubmit)="saveChanges()" role="form">
+            <mat-form-field appearance="fill" style="display:none">
+                <mat-label>
+                    Id
+                </mat-label>
+                <input matInput type="text" formControlName="id" required>
 
-<input name="inputName" type="text" [(ngModel)]="selectedFood.name">
+            </mat-form-field>
 
-<label for="inputPrice">Price</label>
+            <mat-form-field appearance="fill">
+                <mat-label>
+                    Name
+                </mat-label>
+                <input matInput type="text" formControlName="name">
+                <div *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="alert alert-danger">
 
-<input name="inputPrice" type="text" [(ngModel)]="selectedFood.price">
+                    <div *ngIf="name?.errors?.['required']">
+                        Name is required.
+                    </div>
+                    <div *ngIf="name?.errors?.['minlength']">
+                        Name must be at least 3 characters long.
+                    </div>
+                </div>
+            </mat-form-field>
 
+            <mat-form-field appearance="fill">
+                <mat-label>
+                    Price
+                </mat-label>
+                <input matInput type="number" formControlName="price">
+                <div *ngIf="price?.invalid && (price?.dirty || price?.touched)" class="alert alert-danger">
 
-<label for="inputCalories">Calories</label>
+                    <div *ngIf="price?.errors?.['required']">
+                        Price is required.
+                    </div>
+                    <div *ngIf="price?.errors?.['min']">
+                        Price must be at least 0.1 .
+                    </div>
+                </div>
+            </mat-form-field>
 
-<input name="inputCalories" type="text" [(ngModel)]="selectedFood.calories">
+            <mat-form-field appearance="fill">
+                <mat-label>
+                    Calories
+                </mat-label>
+                <input matInput type="number" formControlName="calories">
+                <div *ngIf="calories?.invalid && (calories?.dirty || calories?.touched)" class="alert alert-danger">
 
-<button (click)="saveChanges()">Save</button>
+                    <div *ngIf="calories?.errors?.['required']">
+                        Calories is required.
+                    </div>
+                </div>
+            </mat-form-field>
+
+        </form>
+
+    </mat-card-content>
+
+    <mat-card-actions align="start">
+        <button mat-raised-button color="primary" (click)="saveChanges()">Save</button>
+    </mat-card-actions>
+
+</mat-card>
