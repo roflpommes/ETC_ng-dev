@@ -8,5 +8,9 @@ body {
 body {
 	margin: 0;
 	font-family: Roboto, "Helvetica Neue", sans-serif;
-	background-color: rgb(71, 70, 70);
+	background-color: rgb(70, 70, 70);
+}
+
+.clickable {
+	cursor: pointer;
 }

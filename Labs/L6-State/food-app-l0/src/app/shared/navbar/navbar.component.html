@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <div fxHide.gt-xs (click)="toggleMenu()" class="clickable">
+        <mat-icon color="accent">menu</mat-icon>
+    </div>
+
+
+    <div class="menuItem" *ngFor="let navItem of navItems$ | async" routerLinkActive="navLinkActive"
+        routerLink="{{navItem.url}}" [routerLinkActiveOptions]="{exact: true}">
+        {{ navItem.title }}
+    </div>
+</mat-toolbar>

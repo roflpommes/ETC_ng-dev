@@ -1,0 +1,6 @@
+<app-food-list [foodList]=foodListContainer (foodSelected)="onFoodSelected($event)" (foodToAdd)="onFoodAdd($event)"
+    (foodToDelete)="onFoodDelete($event)">
+</app-food-list>
+<app-food-edit *ngIf="current && !hideEdit" (hideEdit)="closeEdit()" [selectedFood]="current"
+    (saveFood)="onFoodSaved($event)">
+</app-food-edit>

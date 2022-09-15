@@ -16,7 +16,7 @@ export class FoodAddComponent implements OnInit {
   }
 
   test() {
-    const id = Math.random()
+    const id = Math.floor(Math.random() * (1000 - 0) + 0)
     const testFood: FoodItem = {
       id: id,
       name: "Test Food1",

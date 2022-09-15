@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 import { from, Observable, of } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-simple-observable',
@@ -9,12 +10,12 @@ import { filter, map } from 'rxjs/operators';
   styleUrls: ['./creating-observable.component.scss'],
 })
 export class CreatingObservableComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
   onErr = (err: any) => console.log(err);
   onComplete = () => console.log('complete');
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   useObsFrom() {
     let arr = [2, 5, 9, 12, 22];
@@ -33,7 +34,7 @@ export class CreatingObservableComponent implements OnInit {
     observer.error = this.onErr;
     observer.complete = this.onComplete;
 
-    from(arr).subscribe(observer);
+    from(arr).pipe(debounceTime(10)).subscribe(observer);
   }
 
   useOf() {

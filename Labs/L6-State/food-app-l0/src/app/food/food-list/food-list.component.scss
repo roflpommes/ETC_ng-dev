@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+}
+
+table th,
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+td button {
+    margin: 10px 0;
+}
+
+tr.table-content:hover {
+    background-color: lightblue;
+}
+
+mat-card {
+    margin-bottom: 1rem;
+}
+
+mat-toolbar {
+    margin-bottom: 0.5rem;
+}

@@ -1,25 +1,19 @@
 {
   "food": [
     {
-      "id": 0.22706127996996228,
+      "id": 889,
       "name": "Test Food1",
       "price": 10,
       "calories": -4
     },
     {
-      "id": 0.5244801024224173,
+      "id": 956,
       "name": "Test Food1",
       "price": 10,
       "calories": -4
     },
     {
-      "id": 0.8431683649057118,
-      "name": "Test Food1",
-      "price": 10,
-      "calories": -4
-    },
-    {
-      "id": 0.9816056093388537,
+      "id": 130,
       "name": "Test Food1",
       "price": 10,
       "calories": -4
