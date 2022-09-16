@@ -10,7 +10,7 @@ import { FoodService } from '../food.service';
 export class FoodContainerComponent implements OnInit {
 
   foodListContainer: FoodItem[];
-  current: FoodItem;
+  current: FoodItem | null;
   loading = false;
   hideEdit = true;
 
@@ -43,12 +43,10 @@ export class FoodContainerComponent implements OnInit {
 
   onFoodDelete(f: FoodItem) {
     console.log("Deleting food item with id ", f.id);
-    this.foodService.deleteFood(f).subscribe(() => {
-      let temp = this.foodListContainer.filter(function (value, index, arr) {
-        return value.id != f.id;
-      })
-
-      this.foodListContainer = temp;
+    this.foodService.deleteFood(f.id).subscribe(() => {
+      let deleted = this.foodListContainer.filter((item) => item.id != f.id);
+      this.foodListContainer = [...deleted];
+      //this.current = null;
     })
   }
 

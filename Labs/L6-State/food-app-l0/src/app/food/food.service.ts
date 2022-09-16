@@ -12,7 +12,7 @@ export class FoodService {
 
   private url = "http://localhost:3000/food"
 
-  getFood(): Observable<FoodItem[]> {
+  getFood() {
     return this.httpClient.get<FoodItem[]>(this.url);
   }
 
@@ -21,8 +21,9 @@ export class FoodService {
     return this.httpClient.put<FoodItem>(putUrl, f);
   }
 
-  deleteFood(f: FoodItem): Observable<FoodItem> {
-    return this.httpClient.delete<FoodItem>(this.url + "/" + f.id);
+  deleteFood(id: number): Observable<any> {
+    console.log(id);
+    return this.httpClient.delete<FoodItem>(this.url + "/" + id);
   }
 
   addFood(f: FoodItem): Observable<FoodItem> {

@@ -27,4 +27,4 @@ import { FirebaseAuthInterceptor } from './fbauth/firebase/firebase-auth.interce
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

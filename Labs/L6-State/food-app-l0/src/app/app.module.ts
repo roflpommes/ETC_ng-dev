@@ -13,6 +13,10 @@ import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoadingComponent } from './shared/loading/loading.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+import { AuthModule } from '@angular/fire/auth';
+import { FbAuthModule } from './fbauth/fbauth.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,10 @@ import { LoadingComponent } from './shared/loading/loading.component';
     FoodModule,
     MaterialModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AuthModule,
+    FbAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
